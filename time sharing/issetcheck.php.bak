@@ -1,0 +1,44 @@
+<html>
+<body>
+<form name="new user" method="post" > 
+<table width="376" height="171" border="1" align="center">
+  <tr>
+    <td>username</td>
+    <td><input type="text" name="txtname" id="textfield"></td>
+  </tr>
+  <tr>
+    <td>password</td>
+    <td><input type="text" name="txtpass" id="textfield2"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td> <input type="submit" name="submit"/> 
+</td>
+  </tr>
+</table></form>
+
+
+<?php
+if (isset($_POST["submit"])) {
+   $conn=mysql_connect("localhost","root");
+
+                 mysql_select_db("classwork",$conn);
+                 $query="select username,password from login where username='".$_POST['txtname']."' and  password='".$_POST['txtpass']."' ";
+
+
+$a=mysql_query($query,$conn);
+
+
+$count=mysql_num_rows($a);
+if($count == 1)
+{
+echo "validuser";
+}
+else
+{
+echo "invaliduser";
+}   
+}
+?>
+</body>
+</html>

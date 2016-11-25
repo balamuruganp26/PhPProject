@@ -1,0 +1,1415 @@
+<?php
+ session_start();
+?>		
+			
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8"> 
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title>Innowell Engineering International Pvt Ltd</title>
+	 <link rel="stylesheet" href="assets/bootstrap-3.3.5/dist/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="assets/scrollbar/jquery.mCustomScrollbar.css">
+	 <script src="assets/bootstrap-3.3.5/js/tests/vendor/jquery.min.js"> </script>
+	 <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"> </script>
+     <script src="assets/jquery/jquery-1.11.3.min.js"> </script>
+	 <script src="assets/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	 <script src="assets/jqueryvalidation/dist/jquery.validate.js"></script>
+	  <script src="assets/datepicker/js/bootstrap-datepicker.js"></script>
+	 <link rel="stylesheet" href="assets/socialnetwork/css/font-awesome.css">
+     <link rel="stylesheet" href="assets/bootstrap-3.3.5/fonts/bootstrap.min.css">
+	
+	  
+     
+        <link href="assets/datepicker/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+        
+		
+			<script src="assets/datepicker/js/moment.js"></script>
+			<script src="assets/datepicker/js/bootstrap-datetimepicker.js"></script>
+			 <link href="assets/selectbox/dist/css/bootstrap-select.min.css" rel="stylesheet">
+
+			<script src="assets/selectbox/dist/js/bootstrap-select.min.js"></script>
+			<script src="assets/selectbox/dist/js/i18n/defaults-*.min.js"></script>
+	  
+     
+      
+
+			
+			
+			<style>
+			html, body {
+   height: 100%;
+  }
+			#home{
+				
+				margin-left:250px;
+				border-color:rgba(51, 102, 255, 1);
+					background-color: rgba(51, 102, 255, 1);
+				
+				
+			}
+			#completeproject{
+				border-color:rgba(51, 102, 255, 1);
+					background-color: rgba(51, 102, 255, 1);
+				
+				
+			}
+			
+			#currenteproject{
+				border-color:rgba(51, 102, 255, 1);
+					background-color: rgba(51, 102, 255, 1);
+				
+			}
+			#deleteproject{
+			border-color:rgba(51, 102, 255, 1);
+					background-color: rgba(51, 102, 255, 1);
+			}
+			#record{
+				border-color:rgba(51, 102, 255, 1);
+					background-color: rgba(51, 102, 255, 1);
+			}
+			#projectlist{
+				
+				border-color:rgba(51, 102, 255, 1);
+					background-color: rgba(51, 102, 255, 1);
+				
+			}
+			#yearrecord{
+				border-color:white;
+				
+			}
+			#monthrecord{
+				border-color:white;
+				
+			}
+			#todayrecord{
+				border-color:white;
+				
+			}
+			#recordlist{
+				
+				background-color:white;
+				display:none;
+				height:200px;
+			
+				
+				
+			}
+			.gi-2x{
+				font-size: 2em;
+				}
+				
+				
+				
+				
+				
+				#close{
+					margin-left:800px;
+					border-color:white;
+					
+				}
+				#getmonthrecord{
+					
+					display:none;
+					position: absolute;
+					
+					
+				}
+				#monthlist{
+					border-color:black;
+					margin-left:400px;
+					
+					
+				}
+				#getyearrecord{
+					
+					display:none;
+					position: absolute;
+					
+					
+				}
+				#yearlist{
+					border-color:black;
+					margin-left:400px;
+					
+					
+				}
+				#recordfinal{
+					
+					border-color:rgba(51, 102, 255, 1);
+					background-color: rgba(51, 102, 255, 1);
+				}
+				#projectlistfilter{
+					
+					display:none;
+					
+				}
+				#headerlist{
+					background-color: rgba(51, 102, 255, 1);
+					
+				}
+				#addprojectform{
+					
+					margin-left:100px;
+					
+					
+					
+				}
+				#projectform{
+					
+					width:80%;
+					background-color:white;
+					height:auto;
+					margin-left:200px;
+					margin-top:10px;
+					display:none;
+					
+					
+					
+				}
+				#projecttitle{
+					
+					margin-left:230px;
+					 font-family:Stencil Std;
+				}
+			 mark{
+				 background-color:#3366ff;
+				 color:black;
+				 
+			 }
+			 
+          #addprojectimag{
+			  width:500px;
+			  height:500px;
+			  margin-left:450px;
+			  margin-top:-500px;
+			  
+			  
+		  }
+
+        #projectviewform{
+			
+			        width:90%;
+					background-color:white;
+					height:auto;
+					margin-left:50px;
+					margin-top:10px;
+					display:none;
+			
+		}
+		#total{
+			text-align:center;
+			
+		}
+		#completeprojectlistselect
+		{
+			
+			
+			
+			height:200px;
+			width:90%;
+			background-color:white;
+			margin-left:60px;
+			margin-top:10px;
+			display:none;
+			
+			
+			
+		}
+		#completeprojectrecord{
+			
+			margin-top:50px;
+			margin-left:300px;
+			
+			
+		}
+	#completeprojecttitle{
+		
+		text-align:center;
+		margin-right:100px;
+	}
+	#completetable{
+		width:90%;
+		margin-left:50px;
+	}
+	#finalcompletetitle{
+		
+		
+		text-align:center;
+	}
+	#currentprojectlistselect{
+			height:200px;
+			width:90%;
+			background-color:white;
+			margin-left:60px;
+			margin-top:10px;
+			display:none;
+		
+		
+	}
+	#currentprojecttitle{
+			
+		text-align:center;
+		margin-right:100px;
+		
+		
+	}
+	#currentprojectrecord{
+		margin-top:50px;
+		margin-left:350px;
+			
+		
+		
+	}
+	#currenttable{
+		width:90%;
+		margin-left:50px;
+		
+	}
+	#finalcurrenttitle{
+		text-align:center;
+		
+		
+	}
+				
+				
+				
+				
+				#finaldeletetitle{
+		
+		
+		text-align:center;
+	}
+	#deleteprojectlistselect{
+			height:200px;
+			width:90%;
+			background-color:white;
+			margin-left:60px;
+			margin-top:10px;
+			display:none;
+			
+		
+		
+	}
+	
+	#deleteprojecttitle{
+			
+		text-align:center;
+		margin-right:100px;
+		
+		
+	}
+	#deleteprojectrecord{
+		margin-top:50px;
+		margin-left:430px;
+			
+		
+		
+	}
+	
+	#finaldeletetitle{
+		text-align:center;
+		
+		
+	}
+	.deletelogo{
+		
+		height:500px;
+		width:500px;
+		
+		
+	}
+	#nolist{
+		
+		
+		margin-top:100px;
+		font-size:30px;
+		text-align:center;
+	}
+				
+			</style>
+			
+			<script type="text/javascript">
+			
+			$(document).ready(function(){
+			$("#projectlist").click(function(){
+				$("#projectviewform").hide(1000);
+				$("#projectform").show(1000);
+				$("#completeprojectlistselect").hide(1000);
+				$("#completeprojectlistresult").hide(1000);
+				  $("#currentprojectlistselect").hide(1000);
+				   $("#currentprojectlistresult").hide(1000);
+				    $("#deleteprojectlistselect").hide(1000);
+					 $("#deleteprojectlistresult").hide(1000);
+				   
+				  
+				   });
+				   $('#recordfinal').click(function(){
+				  
+				$("#projectviewform").show(1000);
+				$("#projectform").hide(1000);
+				$("#completeprojectlistselect").hide(1000);
+				$("#completeprojectlistresult").hide(1000);
+				  $("#currentprojectlistselect").hide(1000);
+				   $("#currentprojectlistresult").hide(1000);
+				    $("#deleteprojectlistselect").hide(1000);
+					 $("#deleteprojectlistresult").hide(1000);
+				   });
+						
+			            $("#completeproject").click(function(){
+				
+				            $("#completeprojectlistselect").show(1000);
+							 $("#projectform").hide(1000);
+							 $("#projectviewform").hide(1000);
+							 $("#completeprojectlistresult").hide(1000);
+							  $("#currentprojectlistselect").hide(1000);
+							   $("#currentprojectlistresult").hide(1000);
+							    $("#deleteprojectlistselect").hide(1000);
+								 $("#deleteprojectlistresult").hide(1000);
+                                      
+				         });
+						 
+						  $("#currenteproject").click(function(){
+				
+				            $("#completeprojectlistselect").hide(1000);
+							 $("#projectform").hide(1000);
+							 $("#projectviewform").hide(1000);
+							 $("#completeprojectlistresult").hide(1000);
+							 $("#currentprojectlistselect").show(1000);
+							 $("#currentprojectlistresult").hide(1000);
+							  $("#deleteprojectlistselect").hide(1000);
+							   $("#deleteprojectlistresult").hide(1000);
+
+				         });
+						 $("#deleteproject").click(function(){
+				
+				            $("#completeprojectlistselect").hide(1000);
+							 $("#projectform").hide(1000);
+							 $("#projectviewform").hide(1000);
+							 $("#completeprojectlistresult").hide(1000);
+							 $("#currentprojectlistselect").hide(1000);
+							 $("#currentprojectlistresult").hide(1000);
+							  $("#deleteprojectlistselect").show(1000)
+
+				         });
+						
+						 
+						
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 /* $("#completebutton").click(function(){
+				
+				            //$("#completeprojectlistselect").show(1000);
+							 $("#projectform").hide(1000);
+							 $("#projectviewform").hide(1000);
+							 $("#completeprojectlistresult").show(1000);
+
+				         });*/
+						 
+						 
+			            
+						     
+						 
+						
+						 
+						 
+						 
+						 
+				   
+						
+						
+			});
+			
+			
+		
+			</script>
+			
+			
+	<script type="text/javascript">
+		
+		$(document).ready(function() {	
+		$(".delete").click(function(){
+			var rowid =$(this).attr('data-id');
+			
+			
+			
+			$.ajax({
+        type: "POST",
+        url: "deleteprojectid.php",
+		data: {'rowid':rowid},
+       
+       success: function(html)
+{
+ location.reload();
+}
+
+});
+			
+         });
+						  
+						 
+						
+						 
+						 
+						 
+						 
+				   
+						
+						
+			});
+			
+		</script>	
+			
+			<script type="text/javascript">
+			
+			$(document).ready(function(){
+			$("#addprojectbutton").click(function(){
+					 var adminusername='<?php echo $_SESSION['user1']?>';
+					 var name=$('#name').val();
+					 var projectname=$('#projectname').val();
+					  var companyname=$('#companyname').val();
+					  var team=$('#team').val();
+					   var projectlocation=$('#Projectlocation').val();
+					    var lastdateandtime=$('#lastdateandtime').val();
+						var editdate=lastdateandtime.substring(0,10);
+			            var edityear=lastdateandtime.substring(6,10);
+			
+			            var edittime=lastdateandtime.substring(10,19);
+					
+					 var month = new Array();
+               month[0] = "January";
+               month[1] = "February";
+               month[2] = "March";
+               month[3] = "April";
+               month[4] = "May";
+               month[5] = "June";
+               month[6] = "July";
+               month[7] = "August";
+               month[8] = "September";
+               month[9] = "October";
+               month[10] = "November";
+               month[11] = "December";
+
+           var d = new Date();
+           var monthname = month[d.getMonth()];
+		   
+		   
+		   
+			if(name==0)
+	       {
+		
+	         alert("plz enter name");
+	         return false;
+	
+	
+	        }
+			if(projectname==0)
+	       {
+		
+	         alert("plz enter projectname");
+	         return false;
+	
+	
+	        }
+		   if(companyname==0)
+	       {
+		
+	         alert("plz enter companyname");
+	         return false;
+	
+	
+	        }
+			 if(projectlocation==0)
+	       {
+		
+	         alert("plz enter projectlocation");
+	         return false;
+	
+	
+	        }
+		   if(team==0)
+	       {
+		
+	         alert("plz select team");
+	         return false;
+	
+	
+	        }
+		    if(lastdateandtime==0)
+	       {
+		
+	         alert("plz select lastdateandtime");
+	         return false;
+	
+	
+	        }
+		   
+		   
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					 	
+			$.ajax({
+                   type: "POST",
+                   url: "admininsertdate.php",
+		           data: 'name='+name+'&editdate='+editdate+'&edittime='+edittime+'&projectname='+projectname+'&companyname='+companyname+'&projectlocation='+projectlocation+'&monthname='+monthname+'&edityear='+edityear+'&team='+team+'&adminusername='+adminusername,
+                    cache: false,
+                   success: function()
+                            {
+								location.reload();
+                                    
+                                
+                            }
+
+});
+		
+				
+	
+	
+	           
+				
+				
+		      });
+		
+			   
+			  
+			  
+			  
+		
+			});
+			
+			
+		
+			</script>
+			
+			
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+				<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+			       
+					 
+					
+				});
+            });
+        </script>
+		
+			<script type="text/javascript">
+			
+			$(document).ready(function(){
+			$("#completebutton").click(function(){
+					var teamname =$('#teamnamelist').val();
+					var projectname =$('#adminaddprojectlist').val();
+			
+				if(teamname == 0)
+	            {
+		
+	         alert("plz select teamname");
+	         return false;
+	
+	
+	             }
+				 if(projectname == 0)
+	            {
+		
+	         alert("plz select projectname");
+	         return false;
+	
+	
+	             }
+				
+				
+		      });
+		
+			   
+			  
+			  
+			  
+		
+			});
+			
+			
+		
+			</script>
+				<script type="text/javascript">
+			
+			$(document).ready(function(){
+			$("#currentbutton").click(function(){
+					var teamname =$('#employeeteamnamelist').val();
+					var projectname =$('#employeeprojectlist').val();
+					
+			
+				if(teamname == 0)
+	            {
+		
+	         alert("plz select teamname");
+	         return false;
+	
+	
+	             }
+				 if(projectname == 0)
+	            {
+		
+	         alert("plz select projectname");
+	         return false;
+	
+	
+	             }
+				
+				
+		      });
+		
+			   
+			  
+			  
+			  
+		
+			});
+			
+			
+		
+			</script>
+			<script type="text/javascript">
+			
+			$(document).ready(function(){
+			$("#deletebutton").click(function(){
+				
+					var projectname =$('#deleteprojectlist').val();
+					
+			
+			
+				 if(projectname == 0)
+	            {
+		
+	         alert("plz select projectname");
+	         return false;
+	
+	
+	             }
+				
+				
+		      });
+		
+			   
+			  
+			  
+			  
+		
+			});
+			
+			
+		
+			</script>
+			</head>
+			
+			<body>
+			
+	
+			
+		
+			
+			
+		<div class="container-fluid" id="headerlist">
+    <h1>
+
+         <button type="button"  class="btn btn-default" id="projectlist" >
+         <span class="glyphicon glyphicon-plus-sign"> </span>
+       ADD PROJECTS</button>
+		
+		   <button type="button"  class="btn btn-default" id="recordfinal" >
+         <span class="glyphicon glyphicon-book" > </span>
+        VIEW PROJECTLIST</button>
+		
+		
+		<button type="button"  class="btn btn-default" id="completeproject" >
+         <span class="glyphicon glyphicon-th-list" > </span>
+        COMPLETE PROJECTS</button>
+		<button type="button"  class="btn btn-default" id="currenteproject" >
+         <span class="glyphicon glyphicon-hand-right" > </span>
+        CURRENT PROJECTS</button>
+		
+		
+		<button type="button"  class="btn btn-default" id="deleteproject" >
+         <span class="glyphicon glyphicon-trash" > </span>
+        DELETE PROJECTS</button>
+		
+             <!--button type="button" id="home" class="btn btn-default"  >
+         <span class="glyphicon glyphicon-home" > </span>
+        HOME</button-->
+
+         <a href="innowelladminpage.php"> <button type="button" id="home" class="btn btn-default"  >
+         <span class="glyphicon glyphicon-home" > </span>
+        HOME</button></a>
+
+		</h1>
+	
+  
+	
+	
+	
+  </div>
+  <div class="row" id="projectform">
+  
+   <form class="form-horizontal" role="form" method="POST" id="addprojectform">
+      <h3 id="projecttitle">  ADD PROJECTS  FOR A TEAM </h3>
+	  <br>
+   <div class="form-group">
+      <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"style="width: 350px">
+       </div>
+	     <div class="form-group">
+       <label for="project name">Project Name:</label>
+      <input type="text" class="form-control" id="projectname"  name="projectname" placeholder="Enter your projectname" style="width: 350px">
+    </div>
+       <div class="form-group">
+       <label for="company name">Company Name:</label>
+      <input type="text" class="form-control" id="companyname" name="companyname" placeholder="Enter your companyname" style="width: 350px">
+    </div>
+	 
+	  <div class="form-group">
+	   <label for="TEAM">Team:</label>
+       <select class="form-control" style="width:350px" id="team" name="team">
+        <option value="">select option</option>
+   
+       <option value="Electrical">Electrical</option>
+       <option value="Green building">Green building</option>
+	   <option value="power safety ">power safety </option>
+       <option value="software development">software development</option>
+
+     </select>
+    </div>
+	 <div class="form-group">
+       <label for="Project location">Project location:</label>
+      <input type="text" class="form-control" id="Projectlocation"  name="Projectlocation" placeholder="Enter your location" style="width: 350px">
+    </div>
+	 <div class="form-group">
+	  <label for="date">lastdate and Time:</label>
+	  
+	  
+	  
+                <div class='input-group date' id='datetimepicker1'>
+				<span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    <input type='text' class="form-control" placeholder= "date and time"  id="lastdateandtime"  
+					name="lastdateandtime" style="width: 310px"/>
+                    
+                </div>
+            </div>
+	
+   <br>
+    <button type="submit" name="submit1" class="btn btn-primary" id="addprojectbutton">submit</button>
+   
+    <br>
+   
+   
+   <img id="addprojectimag" class="img-circle" alt="Cinque Terre" src="assets/back2innowell.jpg"/>
+   
+   
+   </form>
+  
+  </div>
+ <div class="row" id="projectviewform">
+ <form method="POST">
+<?php
+  
+ 
+  $monthnam="";
+ 
+
+ 
+    $host="localhost";
+	$user="root";
+	$password="";
+	
+	$conn=mysql_connect($host,$user,$password);
+	$db=mysql_select_db("facebook",$conn);
+	 $query="select id,name,companyname,projectname,projectlocation,lastdate,lasttime,teamname from adminaddprojectlist";
+	   $a=mysql_query($query,$conn);
+	   
+	   
+	   
+	    $count=mysql_num_rows($a);
+		 
+		
+if($count>0)
+{
+	   echo "<h3 id=\"total\"> <b> TOTAL PROJECT LIST <b> </h3>";
+	   echo "<br>";
+	   echo  "<table class=\"table\" id=\"tablemonth\">";
+   
+        echo  "<tbody>";
+	   echo "<th>admin name</th>";
+       echo "<th> company name</th>";
+        echo "<th>project name</th>";
+		echo  "<th>project location </th>";
+		echo "<th>team name</th>";
+		 echo "<th>submission date</th>";
+		  echo "<th>submission time</th>";
+		   echo "<th></th>";
+	
+	
+	while($row=mysql_fetch_array($a))
+		
+  { 
+	  
+	  $name=$row['name'];
+	  $companyname=$row['companyname'];
+	  $projectname=$row['projectname'];
+	  $projectlocation=$row['projectlocation'];
+	  $lastdate=$row['lastdate'];
+      $teamname=$row['teamname'];  
+	  $lasttime=$row['lasttime'];
+      $id=$row['id'];
+  
+  
+  
+  
+  ?>
+		
+	  
+		 
+		 
+      
+      <tr>
+       
+        <td> <?php echo $name;?> </td>
+        <td> <?php echo $companyname;?> </td>
+		 <td> <?php echo $projectname;?> </td>
+		  <td> <?php echo $projectlocation;?> </td>
+		   <td> <?php echo $teamname;?> </td>
+		    <td> <?php echo $lastdate;?> </td>
+			<td> <?php echo $lasttime;?> </td>
+			<td><button type="submit" id="delete" name="delete" data-id=<?php echo $id;?> class="btn btn-default delete">
+         <span class="glyphicon glyphicon-trash" > </span>
+        </button> </td>
+      </tr>
+	   
+        
+		
+		
+<?php
+ 
+  }
+ echo  "</tbody>";
+ echo   "</table>";	
+}
+   
+	
+  
+  else{
+	   $monthnam="no record list";
+	
+	  
+	  
+  }
+  
+?>
+</form>
+
+  <p align="center" id="nolist"> <?php echo $monthnam; ?> </p>
+
+
+
+
+
+
+ 
+ </div>
+ <div class="row" id="completeprojectlistselect">
+ <h3 id="completeprojecttitle" > <b> COMPLETE PROJECT LIST </b> </h3>
+  <form class="form-inline" role="form" method="POST" id="completeprojectrecord">
+		<div  class="form-group">
+        <div class="col-sm-10">
+       <select class="form-control" style="width:150px" id="adminprojectlist" name="adminprojectlist">
+        <option value=" ">select project</option>
+   
+       
+     <?php
+    $host="localhost";
+	$user="root";
+	$password="";
+	
+	$conn=mysql_connect($host,$user,$password);
+	$db=mysql_select_db("facebook",$conn);
+	 $query="select projectname from adminaddprojectlist";
+	 $a=mysql_query($query,$conn);
+	  $count=mysql_num_rows($a);
+		 
+		
+
+
+	while($row=mysql_fetch_array($a))
+		
+  { 
+	  $projectadd=$row[projectname];
+	  
+?>	   
+  <option value="<?php echo $projectadd ?>"> <?php echo $projectadd ?> </option>
+<?php
+  }
+
+?>
+
+     </select>
+     </div>
+    </div>
+	<div  class="form-group">
+        <div class="col-sm-10">
+       <select class="form-control" style="width:150px" id="teamnamelist" name="teamnamelist">
+        <option value=" ">select team</option>
+   
+       <option value="green building"> green building</option>
+       <option value="fire safety">fire safety</option>
+	   <option value="Electrical">Electrical</option>
+       <option value="software development">software development</option>
+
+     </select>
+     </div>
+    </div>
+	&nbsp &nbsp &nbsp
+    <button type="submit" class="btn btn-primary"  id="completebutton" name="completebutton">search list</button>
+	</form>
+		
+ 
+ </div>
+ 
+
+
+ <div class="row" id="completeprojectlistresult">
+ 
+<?php
+  $monthnam="";
+  if(isset($_POST['completebutton']))
+  { 
+
+
+       $name="";
+	  $teamname="";
+	  $projectname="";
+	  $companyname="";
+	  $completesubmissondate="";
+	   $selectprojectname="";
+	     $selectteamname="";
+
+     $selectprojectname=$_POST['adminprojectlist'];
+	 $selectteamname=$_POST['teamnamelist'];
+
+ 
+ $host="localhost";
+	$user="root";
+	$password="";
+	
+	$conn=mysql_connect($host,$user,$password);
+	$db=mysql_select_db("facebook",$conn);
+	 $query="select completeemployeename, completeteamname ,completeprojectname,completecompanyname,completesubmissondate from employeecompleteproject where completeteamname='".$selectteamname."' and completeprojectname='".$selectprojectname."'";
+	   $a=mysql_query($query,$conn);
+	    $count=mysql_num_rows($a);
+		 
+		
+if($count>0)
+{
+	   echo "<h3 id=\"finalcompletetitle\"><b>COMPLETE PROJECT  TEAM </b></h3>";
+	   echo "<br>";
+	   echo  "<table class=\"table\" id=\"completetable\">";
+   
+        echo  "<tbody>";
+	   echo "<th>name</th>";
+       echo "<th>teamname</th>";
+        echo "<th>projectname</th>";
+		echo  "<th>companyname</th>";
+		echo "<th>submissiondate</th>";
+		
+	
+	
+	while($row=mysql_fetch_array($a))
+		
+  { 
+  
+	  
+	  $name=$row['completeemployeename'];
+	  $teamname=$row['completeteamname'];
+	  $projectname=$row['completeprojectname'];
+	  $companyname=$row['completecompanyname'];
+	  $completesubmissondate=$row['completesubmissondate'];
+     
+  
+  
+  
+  
+  ?>
+		
+	  
+		 
+		 
+      
+      <tr>
+       
+        <td> <?php echo  $name;?> </td>
+        <td> <?php echo $teamname;?> </td>
+		 <td> <?php echo $projectname;?> </td>
+		  <td> <?php echo  $companyname;?> </td>
+		   <td> <?php echo $completesubmissondate;?> </td>
+		   
+      </tr>
+	   
+        
+		
+		
+<?php
+ 
+  }
+ echo  "</tbody>";
+ echo   "</table>";	
+}
+   
+	
+  
+  else{
+	   $monthnam="no record list";
+	
+	  
+	  
+  }
+  }
+?>	
+  <p align="center" id="nolist"> <?php echo $monthnam; ?> </p>
+
+
+
+ 
+ </div>
+  
+  <div class="row" id="currentprojectlistselect">
+ <h3 id="currentprojecttitle" > <b> EMPLOYEES CURRENTLYWORKING PROJECTS </b> </h3>
+  <form class="form-inline" role="form" method="POST" id="currentprojectrecord">
+		<div  class="form-group">
+        <div class="col-sm-10">
+       <select class="form-control" style="width:150px" id="employeeprojectlist" name="employeeprojectlist">
+        <option value=" ">select project</option>
+   
+       
+     <?php
+    $host="localhost";
+	$user="root";
+	$password="";
+	
+	$conn=mysql_connect($host,$user,$password);
+	$db=mysql_select_db("facebook",$conn);
+	 $query="select projectname from adminaddprojectlist";
+	 $a=mysql_query($query,$conn);
+	  $count=mysql_num_rows($a);
+		 
+		
+
+
+	while($row=mysql_fetch_array($a))
+		
+  { 
+	  $projectadd=$row[projectname];
+	  
+?>	   
+  <option value="<?php echo $projectadd ?>"> <?php echo $projectadd ?> </option>
+<?php
+  }
+
+?>
+
+     </select>
+     </div>
+	 
+	 </div>
+	 <div  class="form-group">
+        <div class="col-sm-10">
+       <select class="form-control" style="width:150px" id="employeeteamnamelist" name="employeeteamnamelist">
+        <option value=" ">select team</option>
+   
+       <option value="green building"> green building</option>
+       <option value="fire safety">fire safety</option>
+	   <option value="Electrical">Electrical</option>
+       <option value="software development">software development</option>
+
+     </select>
+     </div>
+    </div>
+	  <button type="submit" class="btn btn-primary"  id="currentbutton" name="currentbutton">search list</button>
+	</form>
+	 </div>
+	 <div class="row" id="currentprojectlistresult">
+ 
+<?php
+  $monthnam="";
+  if(isset($_POST['currentbutton']))
+  { 
+
+
+       $name="";
+	  $teamname="";
+	  $projectname="";
+	  $companyname="";
+	  $completesubmissondate="";
+	   $selectprojectname="";
+	     $selectteamname="";
+
+     $selectprojectname=$_POST['employeeprojectlist'];
+	 $selectteamname=$_POST['employeeteamnamelist'];
+
+ 
+ $host="localhost";
+	$user="root";
+	$password="";
+	
+	$conn=mysql_connect($host,$user,$password);
+	$db=mysql_select_db("facebook",$conn);
+	 $query="select employeename,addteamname ,addprojectname,addcompanyname,addsubmissondate from employeeworkingproject where addteamname='".$selectteamname."' and addprojectname='".$selectprojectname."'";
+	   $a=mysql_query($query,$conn);
+	    $count=mysql_num_rows($a);
+		 
+		
+if($count>0)
+{
+	   echo "<h3 id=\"finalcurrenttitle\"><b>EMPLOYEES CURRENTLYWORKING PROJECTS LIST </b></h3>";
+	   echo "<br>";
+	   echo  "<table class=\"table\" id=\"currenttable\">";
+   
+        echo  "<tbody>";
+	   echo "<th>name</th>";
+       echo "<th>teamname</th>";
+        echo "<th>projectname</th>";
+		echo  "<th>companyname</th>";
+		echo "<th>startworking date</th>";
+		
+	
+	
+	while($row=mysql_fetch_array($a))
+		
+  { 
+  
+	  
+	  $name=$row['employeename'];
+	  $teamname=$row['addteamname'];
+	  $projectname=$row['addprojectname'];
+	  $companyname=$row['addcompanyname'];
+	  $completesubmissondate=$row['addsubmissondate'];
+     
+  
+  
+  
+  
+  ?>
+		
+	  
+		 
+		 
+      
+      <tr>
+       
+        <td> <?php echo  $name;?> </td>
+        <td> <?php echo $teamname;?> </td>
+		 <td> <?php echo $projectname;?> </td>
+		  <td> <?php echo  $companyname;?> </td>
+		   <td> <?php echo $completesubmissondate;?> </td>
+		   
+      </tr>
+	   
+        
+		
+		
+<?php
+ 
+  }
+ echo  "</tbody>";
+ echo   "</table>";	
+}
+   
+	
+  
+  else{
+	   $monthnam="no record list";
+	
+	  
+	  
+  }
+  }
+?>	
+  <p align="center"> <?php echo $monthnam; ?> </p>
+
+
+
+ 
+ </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!---BALA-->
+  <div class="row" id="deleteprojectlistselect">
+ <h3 id="deleteprojecttitle" > <b> DELETE COMPLETE PROJECTS </b> </h3>
+  <form class="form-inline" role="form" method="POST" id="deleteprojectrecord">
+		<div  class="form-group">
+        <div class="col-sm-10">
+       <select class="form-control" style="width:150px" id="deleteprojectlist" name="deleteprojectlist">
+        <option value=" ">select project</option>
+   
+       
+     <?php
+    $host="localhost";
+	$user="root";
+	$password="";
+	
+	$conn=mysql_connect($host,$user,$password);
+	$db=mysql_select_db("facebook",$conn);
+	 $query="select projectname from adminaddprojectlist";
+	 $a=mysql_query($query,$conn);
+	  $count=mysql_num_rows($a);
+		 
+		
+
+
+	while($row=mysql_fetch_array($a))
+		
+  { 
+	  $projectadd=$row[projectname];
+	  
+?>	   
+  <option value="<?php echo $projectadd ?>"> <?php echo $projectadd ?> </option>
+<?php
+  }
+
+?>
+
+     </select>
+     </div>
+	 
+	 </div>
+	
+	  <button type="submit" class="btn btn-primary"  id="deletebutton" name="deletebutton">delete project</button>
+	</form>
+	
+</div>	
+ <div class="row" id="deleteprojectlistresult">
+<?php
+  $monthnam="";
+  if(isset($_POST['deletebutton']))
+  { 
+
+
+      
+	     $selectteamname="";
+
+     $selectprojectname=$_POST['deleteprojectlist'];
+	 
+ 
+ $host="localhost";
+	$user="root";
+	$password="";
+	
+	$conn=mysql_connect($host,$user,$password);
+	$db=mysql_select_db("facebook",$conn);
+	 $query="select completeprojectname from employeecompleteproject where  completeprojectname='".$selectprojectname."'";
+	   $a=mysql_query($query,$conn);
+	   $count=mysql_num_rows($a);
+		 
+		
+if($count>0)
+{
+ 
+      $query="delete from  employeecompleteproject where completeprojectname='".$selectprojectname."'";
+	  $a=mysql_query($query,$conn);
+	  
+	   $monthnam="<img class=\"deletelogo\" id=\"logo1\" src=\"assets/delete1.jpg\">";
+	  
+	
+
+	   	
+}
+   
+	
+  
+  else{
+	  
+	 $monthnam="This project  already delete";
+	
+	  
+	  
+  }
+  
+  }
+ 
+?>	
+  <p align="center"> <?php echo $monthnam; ?> </p>
+
+
+
+ 
+ </div>
+  
+ 
+ 
+
+
+  
+ 
+</body>
+</html>
+ 
+      
+        	
+		

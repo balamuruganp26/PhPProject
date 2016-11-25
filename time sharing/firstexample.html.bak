@@ -1,0 +1,18 @@
+<html>
+
+<body>
+
+<!--button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p-->
+
+<button type="button" onclick="document.getElementById('mylist').innerHTML=Date()">my app</button>
+
+<p id="mylist">  </p>
+
+<h1 id ="mycalllist"> bala</h1>
+<button type="button" onclick="document.getElementById('mycalllist').innerHTML="murugan""><button>
+</body>
+</html>

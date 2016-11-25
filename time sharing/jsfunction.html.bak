@@ -1,0 +1,34 @@
+<html>
+<script>
+function myfunction()
+{
+
+var x= document.getElementById("changecoulor");
+x.style.color="red";
+
+var y=10;
+}
+function myfunctions()
+{
+var x=9;
+var y=10;
+var z=x*y;
+
+
+
+var name="bala murugan",lastname= "bala";
+document.getElementById("changecoulor").innerHTML = "My First Page";
+alert(z+""+name+"");
+
+
+
+
+}
+
+</script>
+<body>
+<h1 id="changecoulor"> bala </h1>
+<button  onclick="myfunction()"> try it</button>
+<button  onclick="myfunctions()"> try it</button>
+</body>
+<html>
